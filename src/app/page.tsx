@@ -1,6 +1,6 @@
 "use client";
 
-import BookingCard from "@/components/Booking";
+import BookingCard from "@/components/booking-card";
 import { useState } from "react";
 // import Datepicker, { DateValueType } from "react-tailwindcss-datepicker";
 import {
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { DatePicker } from "@/components/DatePicker";
+import { DatePicker } from "@/components/date-picker";
 
 const bookings: Booking[] = [
   {
