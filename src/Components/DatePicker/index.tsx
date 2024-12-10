@@ -5,14 +5,14 @@ import { addDays, format } from "date-fns";
 import { DateRange } from "react-day-picker";
 import CalendarIcon from "@/assets/calendar.svg";
 import { cn } from "@/lib/utils";
-import { Button } from "@/Components/ui/Button";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Calendar } from "@/Components/ui/Calendar";
+import { Calendar } from "@/components/ui/calendar";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/Components/ui/Popover";
+} from "@/components/ui/popover";
 export function DatePicker({
   className,
 }: React.HTMLAttributes<HTMLDivElement>) {
