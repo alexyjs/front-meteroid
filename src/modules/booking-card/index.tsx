@@ -6,8 +6,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Badge } from "@/components/ui/badge";
+} from "@/modules/ui/dropdown-menu";
+import { Badge } from "@/modules/ui/badge";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const BookingCard: React.FC<{ booking: Booking }> = ({ booking }) => {
