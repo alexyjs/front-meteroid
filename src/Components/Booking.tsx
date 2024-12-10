@@ -6,8 +6,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Badge } from "@/components/ui/badge";
+} from "@/Components/ui/DropdownMenu";
+import { Badge } from "@/Components/ui/Badge";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 const BookingCard: React.FC<{ booking: Booking }> = ({ booking }) => {
@@ -21,7 +21,7 @@ const BookingCard: React.FC<{ booking: Booking }> = ({ booking }) => {
     <div className="w-full bg-white rounded-xl border border-gray-300 p-4">
       <div className="flex justify-between items-center gap-2">
         <div className="grid">
-          <h2 className="font-semibold text-lg truncate">{booking.title}</h2>
+          <h2 className="font-semibold text-base truncate">{booking.title}</h2>
         </div>
         <div className="flex gap-1 shrink-0">
           <DropdownMenu>
@@ -51,9 +51,9 @@ const BookingCard: React.FC<{ booking: Booking }> = ({ booking }) => {
         <Badge
           className={` px-2 py-1 rounded-lg ${
             booking.status === "canceled"
-              ? "bg-red-100 text-black border border-red-200"
+              ? "bg-red-200 text-black border border-red-300"
               : booking.status === "scheduled"
-              ? "bg-purple-100 text-purple-600"
+              ? "bg-purple-200 text-black border border-purple-300"
               : "bg-gray-100 text-gray-600"
           }`}
         >

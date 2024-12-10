@@ -9,16 +9,34 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { DatePicker } from "@/components/date-picker";
+} from "@/Components/ui/Select";
+import { Button } from "@/Components/ui/Button";
+import { Input } from "@/Components/ui/Input";
+import { DatePicker } from "@/Components/DatePicker";
 
 const bookings: Booking[] = [
   {
     title: "Standard Weekly Prep - 3.5 hours",
-    date: "Sat, Dec 7, 2024 · 12:30 PM CST",
-    status: "canceled", // possible values: 'scheduled', 'canceled', 'pending'
+    date: "Wed, Dec 11, 2024 · 11:00 AM CST",
+    status: "scheduled",
+    clientName: "Zainab G",
+    chefName: "Horacio Ribe",
+    duration: "210 minutes",
+    payout: "Pending",
+  },
+  {
+    title: "Events",
+    date: "Sat, Dec 7, 2024 · 4:30 PM CST",
+    status: "scheduled",
+    clientName: "Zainab G",
+    chefName: "Horacio Ribe",
+    duration: "210 minutes",
+    payout: "Pending",
+  },
+  {
+    title: "Dinner Prep",
+    date: "Tue, Dec 10, 2024 · 6:00 PM CST",
+    status: "scheduled",
     clientName: "Zainab G",
     chefName: "Horacio Ribe",
     duration: "210 minutes",
@@ -27,7 +45,16 @@ const bookings: Booking[] = [
   {
     title: "Standard Weekly Prep - 3.5 hours",
     date: "Sat, Dec 7, 2024 · 12:30 PM CST",
-    status: "canceled", // possible values: 'scheduled', 'canceled', 'pending'
+    status: "canceled",
+    clientName: "Zainab G",
+    chefName: "Horacio Ribe",
+    duration: "210 minutes",
+    payout: "Pending",
+  },
+  {
+    title: "Meal Prep Light",
+    date: "Thu, Dec 5 · 6:00 PM CST",
+    status: "canceled",
     clientName: "Zainab G",
     chefName: "Horacio Ribe",
     duration: "210 minutes",
@@ -35,26 +62,8 @@ const bookings: Booking[] = [
   },
   {
     title: "Standard Weekly Prep - 3.5 hours",
-    date: "Sat, Dec 7, 2024 · 12:30 PM CST",
-    status: "canceled", // possible values: 'scheduled', 'canceled', 'pending'
-    clientName: "Zainab G",
-    chefName: "Horacio Ribe",
-    duration: "210 minutes",
-    payout: "Pending",
-  },
-  {
-    title: "Standard Weekly Prep - 3.5 hours",
-    date: "Sat, Dec 7, 2024 · 12:30 PM CST",
-    status: "canceled", // possible values: 'scheduled', 'canceled', 'pending'
-    clientName: "Zainab G",
-    chefName: "Horacio Ribe",
-    duration: "210 minutes",
-    payout: "Pending",
-  },
-  {
-    title: "Standard Weekly Prep - 3.5 hours",
-    date: "Sat, Dec 7, 2024 · 12:30 PM CST",
-    status: "canceled", // possible values: 'scheduled', 'canceled', 'pending'
+    date: "Sun, Dec 8 · 1:00 PM CST",
+    status: "scheduled",
     clientName: "Zainab G",
     chefName: "Horacio Ribe",
     duration: "210 minutes",
@@ -80,7 +89,7 @@ export default function Home() {
 
         <div className="flex justify-between items-center gap-4 mt-4">
           <h1 className="text-2xl font-bold">Upcoming Bookings</h1>
-          <button className="text-sm">Find Available Chef</button>
+          <button className="text-xs text-nowrap">Find Available Chef</button>
         </div>
 
         {/* Search and Filters */}
@@ -92,11 +101,11 @@ export default function Home() {
         </div>
 
         <div className="w-full flex gap-4 mt-4">
-          <div className="w-1/4 shrink-0 flex flex-col">
+          <div className="w-[30%] shrink-0 flex flex-col">
             <label className="font-semibold text-sm">Sort By:</label>
             <Select>
-              <SelectTrigger className="mt-1 rounded-xl">
-                <SelectValue className="text-left" placeholder="Event Name" />
+              <SelectTrigger className="mt-1 rounded-xl text-xs">
+                <SelectValue className="!text-left" placeholder="Event Name" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="event 1">Event</SelectItem>
